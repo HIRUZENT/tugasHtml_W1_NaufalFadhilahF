@@ -1,38 +1,385 @@
-<style>
-    *{
-        border: 1px solid black;
-    }
-body{
-    background-image: url("main-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#landing_view{
-    height: 100dvh;
-}
-#landing_view .name{
-    height: 100dvh;
-    text-align: center;
-    justify-content: center;
-}
-
-</style>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>CV - Naufal Fadhilah Fitrah</title>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gotham-6">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Edu+NSW+ACT+Foundation:wght@700&family=Kanit:wght@500&family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet" />
+    <style>
+        * {
+            /* border: 1px solid black; */
+        }
+
+        :root {
+            --font: 'Gotham Black', sans-serif;
+            --font_normal: 'Gotham', sans-serif;
+            --red_color: #b70404;
+        }
+
+        @keyframes slide_kanan {
+            from {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide_atas {
+            from {
+                transform: translateY(-50%);
+            }
+
+            to {
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes fade_in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url("main-bg.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #landing_view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #landing_view .description {
+            margin-top: -20%;
+        }
+
+        #landing_view hr,
+        h1 {
+            animation: slide_atas 1s;
+        }
+
+        #landing_view #desc_about {
+            animation: fade_in 3s;
+        }
+
+        #landing_view .description hr {
+            width: 15px;
+            float: left;
+            height: 1px;
+            color: black;
+            margin-right: 7px;
+            margin-top: 14px;
+        }
+
+        #landing_view .description span {
+            color: black;
+            color: var(--red_color);
+        }
+
+        .description #greetings {
+            font-family: var(--font_normal);
+            font-size: 20px;
+        }
+
+        .navbar a {
+            font-weight: bold;
+            font-size: 15px;
+            padding: 15px;
+            margin: 0 10px;
+            font-family: var(--font);
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            font-weight: bold;
+            font-size: 17px;
+            color: #b70404;
+            margin-top: -3px;
+        }
+
+        .navbar .home {
+            color: #b70404;
+            font-weight: bold;
+        }
+
+        .my_photo {
+            max-width: 43pc;
+            animation: slide_kanan 1s;
+        }
+
+        .nama h1 {
+            font-family: var(--font);
+        }
+
+        #desc_about {
+            color: black;
+            font-family: var(--font_normal);
+        }
+
+        .navbar-lang {
+            position: absolute;
+            right: 40px;
+            font-family: var(--font);
+            font-weight: bold;
+            font-size: 14px;
+            animation: slide_atas 1s;
+        }
+
+        .navbar-lang a {
+            padding: 0px 20px 0px 20px;
+            text-decoration: none;
+            color: black;
+            margin-top: -10px;
+            transition: 0.3s;
+        }
+
+        .navbar-lang a:hover {
+            font-weight: bold;
+            font-size: 17px;
+            color: var(--red_color);
+            margin-top: -3px;
+        }
+
+        #information {
+            margin: 5%;
+        }
+
+        #information h1 {
+            font-family: var(--font);
+            letter-spacing: 3;
+        }
+
+        #information h2 {
+            font-size: 25px;
+            font-weight: 650;
+        }
+
+        #information h3 {
+            font-size: 15px;
+            font-weight: 650;
+        }
+
+        #information span {
+            font-weight: 300;
+        }
+
+        @media(max-width:752px) {
+            #greetings{
+                margin-top: 4rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="row" id="landing_view">
-        <div class="col-6">
-            <h1 class="name">Naufal Fadhilah Fitrah</h1>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#landing_view" class="nav-link home">HOME</a></li>
+                <li class="nav-item"><a href="#pendidikan" class="nav-link">PENDIDIKAN</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+                <li class="nav-item"><a href="#organization" class="nav-link">ORGANIZATION</a></li>
+                <li class="nav-item"><a href="#certification" class="nav-link">CERTIFICATION</a></li>
+                <li class="nav-item"><a href="#award" class="nav-link">AWARD</a></li>
+            </ul>
         </div>
-        <div class="col-6">
-            <img src="mai" alt="">
+    </nav>
+    <nav class="navbar-lang">
+        <a href="portofolio-eng.html">ENG</a>
+        <span>/</span>
+        <a href="#" style="color: var(--red_color);">IDN</a>
+    </nav>
+
+    <section id="landing_view" class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+                    <img src="fadil2.png" alt="foto_pas" class="img-fluid my_photo">
+                </div>
+                <div id="intro" style="margin-top: 10%;"
+                    class="col-md-6 d-flex flex-column justify-content-center px-5">
+                    <div class="description">
+                        <hr>
+                        <p id="greetings">HELLO <span>!</span></p>
+                        <div class="nama">
+                            <h1>I'm <span>Naufal</span> Fadhilah Fitrah</h1>
+                        </div>
+                        <p id="desc_about">Saya seorang pelajar dari SMK Negeri 1 Depok kejuruan Pengembangan Perangkat
+                            Lunak dan Gim
+                            yang berdedikasi mencari kesempatan PKL untuk mengembangkan keterampilan di bidang IT.
+                            Jujur, disiplin, bertanggung jawab dan memiliki keinginan untuk belajar serta berkomitmen
+                            untuk memberikan kontribusi untuk lingkungan kerja. Saat ini aktif dalam kegiatan
+                            ekstrakulikuler dan organisasi seperti OSIS dan Karang Taruna.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
+    <section id="information">
+        <div id="pendidikan" class="container">
+            <h1>PENDIDIKAN</h1>
+            <hr>
+            <div class="row" style="margin-left: 25px;">
+                <div class="col-md-12">
+                    <h2>Telkom University <span>- South Jakarta, DKI Jakarta</span></h2>
+                    <h3>Undergraduate in Information Systems | GPA : 3.88/4.00</h3>
+                    <p>Relevant courses : Object Oriented Programming, SQL Database Systems, Design Thinking, Supply
+                        Chain
+                        Management</p>
+                    <i>Sept 2024 - Now</i>
+
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>SMK Negeri 1 Depok <span>- Depok, West Java</span></h2>
+                    <h3>Pengembangan Perangkat Lunak dan Gim / Rekayasa Perangkat Lunak</h3>
+                    <p>Competent in LSP Expertise Competencies : Frontend and Backend Programming, Database
+                        Management,
+                        UI/UX Design, Game Development</p>
+                    <p><i>Jul 2021 - Jun 2024</i></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience" class="container">
+            <h1>EXPERIENCE</h1>
+            <hr>
+            <div class="row" style="margin-left: 25px;">
+                <div class="col-md-12">
+                    <h2>Frontend Developer Internship <span>- PT. Amanah Karya Indonesia</span></h2>
+                    <p>Participated in the development of the Frontend of Amandemy Superadmin website application.<br>
+                        Responsible for Frontend programming using React Js, Tailwind, antDesign, etc.<br>
+                        Collaborated with the back-end team in managing and integrating APIs.<br>
+                        Conducted feature testing and performance evaluation.<br>
+                        <i>Jan - May 2024, RTM Depok, West Java</i>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>MSIB Mentor Internship <span>- Amandemy</span></h2>
+                    <p>Created learning materials, presentations, assignments, and final projects.<br>
+                        Guided MSIB participants in website development.<br>
+                        Contributed to producing high-quality MSIB graduates.<br>
+                        <i>Jan - May 2024</i>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>Webinar Speaker <span>- Google Developer Groups On Campus, Telkom University Jakarta</span></h2>
+                    <p>Delivered a webinar “Get to Know about Frontend/Backend Developers and How It Work with API”.<br>
+                        Explained roles of Frontend & Backend developers, APIs, SSR vs CSR, and SEO.<br>
+                        <i>2 Mar 2025, RTM Depok, West Java</i>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>Lecturer <span>- PT. Digikidz Maker Education Group</span></h2>
+                    <p>Taught website coding, game development, and robotics using Arduino.<br>
+                        Delivered multimedia lessons (image editing, animation, video editing).<br>
+                        Conducted private & on-site classes with interactive teaching materials.<br>
+                        <i>Jun 2025 - Now, Pondok Indah, South Jakarta</i>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>Freelance Data Engineer <span>- PT. Garap Edukasi Nusantara</span></h2>
+                    <p>Collected and managed business-relevant data.<br>
+                        Supported decision-making through effective data processing.<br>
+                        Performed data migration to system database.<br>
+                        <i>Jun - Aug 2024, East Depok, West Java</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="organization" class="container">
+            <h1>ORGANIZATION</h1>
+            <hr>
+            <div class="row" style="margin-left: 25px;">
+
+                <div class="col-md-12">
+                    <h2>School Student Organization</h2>
+                    <p>Head Of Section 10 Communication Guidance In English<br>
+                        Coordinator of Esport Classmeeting Events at School<br>
+                        Coordinator of School Teachers' Day Events</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="certification" class="container">
+            <h1>CERTIFICATION</h1>
+            <hr>
+            <div class="row" style="margin-left: 25px;">
+
+                <div class="col-md-12">
+                    <h2>Head Of Section 10 Communication Guidance In English <span>- SMK Negeri 1 Depok</span></h2>
+                    <p>ID Credential : 3351.01/421.5/SMKN.1/II/2024</p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>Webinar Speaker in Peer-to-Peer Class <span>- GDG On Campus: Telkom University Jakarta</span>
+                    </h2>
+                    <p>ID Credential : 004/GDGOC/EC2/3/2025</p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>KKNI Level II Software Engineering Expertise Competency <span>- Indonesian Professional
+                            Certification
+                            Agency</span></h2>
+                    <p>ID Credential : 62010 2512 2 0000237 2023</p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>Internship Certificate <span>- Indonesian Professional Certification Agency</span></h2>
+                    <p>ID Credential : 023.004/HRD/SRT/V/2024</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="award" class="container">
+            <h1>AWARD</h1>
+            <hr>
+            <div class="row" style="margin-left: 25px;">
+
+                <div class="col-md-12">
+                    <h2>One of the Best Students</h2>
+                    <p>SMKN 1 Depok Software and Game Development | <i>11 May 2024</i></p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>3rd Place - IT Web Technologies Competition</h2>
+                    <p>MGMP RPL/PPLG Depok | <i>27 March 2024</i></p>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h2>3rd Runner Up - National Coding Clash</h2>
+                    <p>SMK Coding by Alkademi | <i>10 December 2023</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
