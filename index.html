@@ -110,7 +110,7 @@
             width: 100%;
             position: fixed;
             top: 0;
-            left: 50%;  
+            left: 50%;
             transform: translateX(-50%);
             background: white;
             z-index: 999;
@@ -206,6 +206,39 @@
                 margin-top: 4rem;
             }
         }
+
+        .fa-bars {
+            display: none;
+        }
+
+        .navbar {
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            #intro{
+                margin-top: 13rem !important;
+            }
+            #landing_view{
+                margin-top: -2% !important;
+            }
+            #landing_view img{
+                margin-top: 5rem;
+            }
+            .fa-bars {
+                display: block;
+                margin: 0;
+                transform: translateY(-35rem);
+                margin-left: 2rem !important;
+            }
+
+            .navbar {
+                display: none;
+            }
+            .navbar-lang{
+                transform: translateY(-2rem);
+            }
+        }
     </style>
 </head>
 
@@ -230,13 +263,14 @@
     </nav>
 
     <section id="landing_view" class="container-fluid">
+        <i class="fa-solid fa-bars"></i>
         <div class="container">
             <div class="row align-items-center text-center text-md-start">
-                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+                <div class="col-lg-6 mb-4 mb-md-0 d-flex justify-content-center">
                     <img src="fadil2.png" alt="foto_pas" class="img-fluid my_photo">
                 </div>
                 <div id="intro" style="margin-top: 10%;"
-                    class="col-md-6 d-flex flex-column justify-content-center px-5">
+                    class="col-lg-6 d-flex flex-column justify-content-center px-4">
                     <div class="description">
                         <hr>
                         <p id="greetings">HELLO <span>!</span></p>
